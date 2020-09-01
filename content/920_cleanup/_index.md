@@ -1,11 +1,11 @@
 ---
-title: "Cleanup"
+title: "整理環境"
 chapter: true
 weight: 920
 tags:
-  - beginner
+  - 入門者
 ---
 
-# Cleanup
+# 整理環境
 
-![Cleaned Environment](/images/cleanup.svg)
+![整理環境](/images/cleanup.svg)

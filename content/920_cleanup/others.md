@@ -1,14 +1,14 @@
 ---
-title: "Cleanup the Other Clusters"
+title: "整理清除其他叢集"
 date: 2018-08-07T12:37:34-07:00
 weight: 5
 draft: true
 ---
 
-**If you haven't removed the earlier clusters already**, make sure to delete the first two clusters we created:
+**如果您尚未刪除之前的叢集**, 請確保刪除我們創建的前兩個叢集
 
-[Follow the instructions here to delete the cluster we created with eksctl.](/eksctl/cleanup.html)
+[按照此處的說明刪除我們使用eksctl創建的集群](/eksctl/cleanup.html)
 
-[Follow the instructions here to delete the cluster we created with terraform.](/terraform/cleanup.html)
+[請按照此處的說明刪除我們使用terraform創建的集群。](/terraform/cleanup.html)
 
-[Follow the instructions here to delete the cluster we created with terraform.](/cloudformation/cleanup.html)
+[請按照此處的說明刪除我們使用terraform創建的集群。](/cloudformation/cleanup.html)

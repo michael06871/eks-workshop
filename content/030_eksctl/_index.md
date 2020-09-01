@@ -1,10 +1,10 @@
 ---
-title: "Launch using eksctl"
+title: "開始使用 eksctl"
 chapter: true
 weight: 30
 pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 tags:
-  - beginner
+  - 入門者
   - kubeflow
   - appmesh
   - CON203
@@ -13,11 +13,12 @@ tags:
   - OPN401
 ---
 
-# Launch using [eksctl](https://eksctl.io/)
+# 開始使用 [eksctl](https://eksctl.io/)
 
 {{< youtube jGrdVSlIkNQ >}}
 
-[eksctl](https://eksctl.io) is a tool jointly developed by AWS and [Weaveworks](https://weave.works) that automates much of
-the experience of creating EKS clusters.
+[eksctl](https://eksctl.io) 是AWS和[Weaveworks](https://weave.works) 聯合開發的工具 
+可自動創建大量EKS叢集
 
-In this module, we will use eksctl to launch and configure our EKS cluster and nodes.
+
+在本章節中，我們將使用eksctl建立和配置我們的EKS叢集和節點。

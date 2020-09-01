@@ -1,17 +1,16 @@
 ---
-title: "Delete the EKSCTL Cluster"
+title: "刪除EKSCTL叢集"
 date: 2018-08-07T13:37:53-07:00
 weight: 30
 ---
+執行以下指令刪除EKS叢集資源:
 
-In order to delete the resources created for this EKS cluster, run the following commands:
-
-Delete the cluster:
+刪除叢集:
 
 ```bash
 eksctl delete cluster --name=eksworkshop-eksctl
 ```
 
 {{% notice tip %}}
-Without the `--wait` flag, this will only issue a delete operation to the cluster's CloudFormation stack and won't wait for its deletion. The `nodegroup` will have to complete the deletion process before the EKS cluster can be deleted. The total process will take approximately 15 minutes, and can be monitored via the [CloudFormation Console](https://console.aws.amazon.com/cloudformation/home).
+若是執行時沒有添加`--wait`, 這只會向叢集的CloudFormation發出刪除指令，而不等待其刪除, 在刪除EKS叢集之前，`nodegroup`將必須完成整個刪除過程。 過程大約需要花費15分鐘，可以通過[CloudFormation控制台](https://console.aws.amazon.com/cloudformation/home)查看.
 {{% /notice %}}

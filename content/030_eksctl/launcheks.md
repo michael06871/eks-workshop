@@ -1,20 +1,20 @@
 ---
-title: "Launch EKS"
+title: "建立 EKS"
 date: 2018-08-07T13:34:24-07:00
 weight: 20
 ---
 
 
 {{% notice warning %}}
-**DO NOT PROCEED** with this step unless you have [validated the IAM role](/020_prerequisites/workspaceiam/#validate-the-iam-role) in use by the Cloud9 IDE. You will not be able to run the necessary kubectl commands in the later modules unless the EKS cluster is built using the IAM role.
+**請確認** 在這個步驟 除非你已經在Cloud9 IDE有使用[已驗證的IAM角色](/020_prerequisites/workspaceiam/#validate-the-iam-role). 否則您將無法在之後的章節中運行必要的kubectl命令。
 {{% /notice %}}
 
-#### Challenge:
+#### 挑戰:
 
-**How do I check the IAM role on the workspace?**
+**如何在workspace確認IAM角色?**
 
-{{%expand "Expand here to see the solution" %}}
-Run `aws sts get-caller-identity` and validate that your _Arn_ contains `eksworkshop-admin`and an Instance Id.
+{{%expand "點選展開解決方案" %}}
+執行 `aws sts get-caller-identity` 驗證你的_Arn_是否包含 `eksworkshop-admin`和實例ID.
 
 ```output
 {
@@ -24,18 +24,18 @@ Run `aws sts get-caller-identity` and validate that your _Arn_ contains `ekswork
 }
 ```
 
-If you do not see the correct role, please go back and [validate the IAM role](/020_prerequisites/workspaceiam/#validate-the-iam-role) for troubleshooting.
+如果您沒有找到正確的角色, 請回去檢查您[已驗證的角色](/020_prerequisites/workspaceiam/#validate-the-iam-role) 解決此問題.
 
-If you do see the correct role, proceed to next step to create an EKS cluster.
+如果您有看到正確的角色, 請繼續執行下一個步驟, 建立EKS叢集
 {{% /expand %}}
 
-### Create an EKS cluster
+### 建立一個EKS叢集
 
 {{% notice warning %}}
-`eksctl` version must be 0.24.0 or above to deploy EKS 1.17, [click here](/030_eksctl/prerequisites) to get the latest version.
+`eksctl` 版本必須要高於0.24.0才能去部署EKS 1.17, [點選這裏](/030_eksctl/prerequisites) 取得最新版本.
 {{% /notice %}}
 
-Create an eksctl deployment file (eksworkshop.yaml) use in creating your cluster using the following syntax:
+建立一個eksctl部署檔案(eksworkshop.yaml) 使用以下內容建立您的叢集:
 
 ```bash
 cat << EOF > eksworkshop.yaml
@@ -67,12 +67,12 @@ secretsEncryption:
 EOF
 ```
 
-Next, use the file you created as the input for the eksctl cluster creation.
+接下來, 使用這個檔案來建立eksctl叢集
 
 ```bash
 eksctl create cluster -f eksworkshop.yaml
 ```
 
 {{% notice info %}}
-Launching EKS and all the dependencies will take approximately 15 minutes
+建立EKS與其他相關檔案大約會花費15分鐘左右
 {{% /notice %}}

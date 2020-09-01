@@ -1,8 +1,8 @@
 +++
-title = "Let us know what you think!"
+title = "讓我們知道您的看法"
 chapter = false
 weight = 60
 +++
 
- - Please take our survey!
+ - 請完成我們的調查!
    {{% surveymonkey %}}

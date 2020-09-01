@@ -1,16 +1,16 @@
 ---
-title: "Test the Cluster"
+title: "測試你的叢集"
 date: 2018-08-07T13:36:57-07:00
 weight: 30
 ---
-#### Test the cluster:
-Confirm your nodes:
+#### 測試你的叢集:
+確認你的節點:
 
 ```bash
 kubectl get nodes # if we see our 3 nodes, we know we have authenticated correctly
 ```
 
-#### Export the Worker Role Name for use throughout the workshop:
+#### 設定這個workshop中的Worker Role Name:
 
 ```bash
 STACK_NAME=$(eksctl get nodegroup --cluster eksworkshop-eksctl -o json | jq -r '.[].StackName')
@@ -18,6 +18,6 @@ ROLE_NAME=$(aws cloudformation describe-stack-resources --stack-name $STACK_NAME
 echo "export ROLE_NAME=${ROLE_NAME}" | tee -a ~/.bash_profile
 ```
 
-#### Congratulations!
+#### 恭喜您!
 
-You now have a fully working Amazon EKS Cluster that is ready to use!
+您現在有了一個完整運作的Amazon EKS Cluster!

@@ -1,9 +1,9 @@
 ---
-title: "Conclusion"
+title: "結論"
 chapter: true
 weight: 910
 tags:
-  - beginner
+  - 入門者
 ---
 
-# Conclusion
+# 結論
